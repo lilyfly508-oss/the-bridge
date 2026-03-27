@@ -217,110 +217,17 @@
             margin-top: 16px;
         }
 
-        /* About Section */
-        #about {
-            background: var(--bg-secondary);
-            max-width: 100%;
-        }
-
-        .about-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
-        }
-
-        .about-text {
-            font-size: 17px;
-            color: var(--text-secondary);
-            line-height: 1.9;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-        .about-text strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 24px;
-            background: var(--bg);
-            border-radius: 12px;
-        }
-
-        .stat-number {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--accent);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
-        .about-card {
-            background: var(--bg);
-            padding: 32px;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-        }
-
-        .about-card h3 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        .card-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .card-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .card-label {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 4px;
-        }
-
-        .card-value {
-            font-size: 15px;
-            color: var(--text);
-            font-weight: 500;
-        }
-
-        /* Works Section */
+        /* Works Section - CASE Oriented */
         #works {
             padding-top: 120px;
+        }
+
+        .case-intro {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 48px;
+            line-height: 1.8;
         }
 
         .works-grid {
@@ -344,7 +251,7 @@
 
         .work-image {
             width: 100%;
-            height: 240px;
+            height: 280px;
             background: var(--bg-tertiary);
             display: flex;
             align-items: center;
@@ -353,23 +260,24 @@
             overflow: hidden;
         }
 
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .work-image::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.05) 100%);
+            background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.1) 100%);
         }
 
         .work-placeholder {
-            width: 60px;
-            height: 60px;
-            background: var(--border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: var(--text-muted);
-            font-size: 24px;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
         }
 
         .work-content {
@@ -400,38 +308,17 @@
             line-height: 1.7;
         }
 
-        .work-footer {
-            display: flex;
-            justify-content: space-between;
+        .work-result {
+            display: inline-flex;
             align-items: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .work-tag {
-            font-size: 12px;
-            color: var(--text-muted);
-            padding: 4px 12px;
-            background: var(--bg-secondary);
-            border-radius: 12px;
-        }
-
-        .work-arrow {
-            width: 32px;
-            height: 32px;
-            background: var(--text);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--bg);
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .work-item:hover .work-arrow {
-            background: var(--accent);
+            gap: 8px;
+            margin-top: 16px;
+            padding: 8px 16px;
+            background: rgba(255,77,77,0.08);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 500;
         }
 
         /* Services Section */
@@ -502,6 +389,132 @@
             font-size: 14px;
             color: var(--text-secondary);
             line-height: 1.7;
+        }
+
+        /* Team Section */
+        #team {
+            background: var(--bg-secondary);
+            max-width: 100%;
+        }
+
+        .team-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .team-card {
+            background: var(--bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.4s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 280px;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-photo-placeholder {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .team-info {
+            padding: 24px;
+        }
+
+        .team-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .team-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Partners Section */
+        #partners {
+            max-width: 100%;
+        }
+
+        .partners-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .partner-card {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 32px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            max-width: 500px;
+        }
+
+        .partner-logo {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .partner-logo span {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .partner-info h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .partner-info p {
+            font-size: 14px;
+            color: var(--text-secondary);
         }
 
         /* Contact Section */
@@ -581,19 +594,15 @@
 
         /* Mobile */
         @media (max-width: 1024px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-stats {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
             .works-grid {
                 grid-template-columns: 1fr;
             }
 
             .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .team-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -623,11 +632,11 @@
                 padding: 60px 24px;
             }
 
-            .about-stats {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .services-grid {
+            .team-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -644,9 +653,10 @@
     <nav id="navbar">
         <a href="#" class="logo">THE BRIDGE</a>
         <ul class="nav-links">
-            <li><a href="#about">关于</a></li>
-            <li><a href="#works">作品</a></li>
+            <li><a href="#works">案例</a></li>
             <li><a href="#services">服务</a></li>
+            <li><a href="#team">团队</a></li>
+            <li><a href="#partners">合作方</a></li>
             <li><a href="#contact">联系</a></li>
         </ul>
     </nav>
@@ -657,7 +667,7 @@
             <span class="hero-label">Creative Studio</span>
             <h1 class="hero-title">连接文化<br>与<span>未来</span></h1>
             <p class="hero-desc">
-                冯黎涵，商业空间内容运营者。致力于将传统文化以现代潮流的方式重新演绎，打造具有生命力的文创体验。
+                致力于将传统文化以现代潮流的方式重新演绎，打造具有生命力的文创体验。
             </p>
             <div class="hero-tags">
                 <span class="hero-tag">艺术策展</span>
@@ -668,122 +678,67 @@
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about">
-        <div class="about-inner">
-            <div class="section-header">
-                <div>
-                    <span class="section-label">About</span>
-                    <h2 class="section-title">关于</h2>
-                </div>
-                <div class="section-line"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        10年+ 餐饮文化与品牌营销经验，专注于<strong>商业空间内容运营</strong>、<strong>品牌营销策略</strong>、<strong>文化IP商业化</strong>及<strong>项目操盘</strong>。
-                    </p>
-                    <p>
-                        2025年获上海市「夜生活CEO」称号，主导韩国街（井亭天地）整体市场运营，擅长挖掘文化内核并转化为商业价值。
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">年经验</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label">合作商户</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">#1</span>
-                            <span class="stat-label">上海榜首</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-card">
-                    <h3>背景</h3>
-                    <div class="card-item">
-                        <div class="card-label">职位</div>
-                        <div class="card-value">韩国街项目总助<br>兼市场部负责人</div>
-                    </div>
-                    <div class="card-item">
-                        <div class="card-label">荣誉</div>
-                        <div class="card-value">上海市「夜生活CEO」</div>
-                    </div>
-                    <div class="card-item">
-                        <div class="card-label">学历</div>
-                        <div class="card-value">复旦广告学硕士<br>SFU 双学位</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Works -->
+    <!-- Works - CASE Oriented -->
     <section id="works">
         <div class="section-header">
             <div>
-                <span class="section-label">Works</span>
-                <h2 class="section-title">代表作品</h2>
+                <span class="section-label">Case Studies</span>
+                <h2 class="section-title">代表案例</h2>
             </div>
             <div class="section-line"></div>
         </div>
+        <p class="case-intro">我们相信每个案例都是一次创新的尝试，以下是近年来的代表性作品：</p>
+        
         <div class="works-grid">
+            <!-- Case 1 -->
             <div class="work-item">
                 <div class="work-image">
-                    <div class="work-placeholder">✦</div>
+                    <div class="work-placeholder">添加项目图片</div>
                 </div>
                 <div class="work-content">
-                    <span class="work-year">2024</span>
+                    <span class="work-year">2024 · 冬季</span>
                     <h3 class="work-title">初雪节 IP 打造</h3>
-                    <p class="work-desc">联动30+商户打造文化节庆IP，登顶大众点评「文化街区榜」上海第一</p>
-                    <div class="work-footer">
-                        <span class="work-tag">品牌策划</span>
-                        <span class="work-arrow">→</span>
-                    </div>
+                    <p class="work-desc">联动30+韩国街商户，打造文化节庆IP，将传统节气与现代商业空间完美结合</p>
+                    <div class="work-result">🏆 大众点评上海第一</div>
                 </div>
             </div>
+
+            <!-- Case 2 -->
             <div class="work-item">
                 <div class="work-image">
-                    <div class="work-placeholder">✦</div>
+                    <div class="work-placeholder">添加项目图片</div>
                 </div>
                 <div class="work-content">
-                    <span class="work-year">2024</span>
+                    <span class="work-year">2024 · 春季</span>
                     <h3 class="work-title">甲骨文「百马迎春展」</h3>
-                    <p class="work-desc">策展执行，将传统文化以现代方式呈现，获得广泛好评</p>
-                    <div class="work-footer">
-                        <span class="work-tag">策展</span>
-                        <span class="work-arrow">→</span>
-                    </div>
+                    <p class="work-desc">策展执行，将千年甲骨文化以现代展陈方式呈现，让古老的文字焕发新生</p>
+                    <div class="work-result">📍 热门展览</div>
                 </div>
             </div>
+
+            <!-- Case 3 -->
             <div class="work-item">
                 <div class="work-image">
-                    <div class="work-placeholder">✦</div>
+                    <div class="work-placeholder">添加项目图片</div>
                 </div>
                 <div class="work-content">
-                    <span class="work-year">2023</span>
-                    <h3 class="work-title">黑丸仙草 × 故宫博物院</h3>
-                    <p class="work-desc">文化联名项目，将传统元素与现代品牌完美融合</p>
-                    <div class="work-footer">
-                        <span class="work-tag">文化IP</span>
-                        <span class="work-arrow">→</span>
-                    </div>
+                    <span class="work-year">2023 · 全年</span>
+                    <h3 class="work-title">韩国街商户品牌联动</h3>
+                    <p class="work-desc">持续运营30+韩式餐饮品牌，通过内容营销与活动策划提升客流与复购</p>
+                    <div class="work-result">↑ 回访率+15%</div>
                 </div>
             </div>
+
+            <!-- Case 4 -->
             <div class="work-item">
                 <div class="work-image">
-                    <div class="work-placeholder">✦</div>
+                    <div class="work-placeholder">添加项目图片</div>
                 </div>
                 <div class="work-content">
-                    <span class="work-year">持续</span>
-                    <h3 class="work-title">韩国街商户联动</h3>
-                    <p class="work-desc">30+商户品牌联动，客群回访率提升约15%</p>
-                    <div class="work-footer">
-                        <span class="work-tag">商业运营</span>
-                        <span class="work-arrow">→</span>
-                    </div>
+                    <span class="work-year">2023 · 节日</span>
+                    <h3 class="work-title">黑丸仙草 × 故宫联名</h3>
+                    <p class="work-desc">文化IP跨界合作，将故宫元素融入现代茶饮品牌，创造独特消费体验</p>
+                    <div class="work-result">🔥 爆款联名</div>
                 </div>
             </div>
         </div>
@@ -819,6 +774,53 @@
                     <span class="service-number">04</span>
                     <h3 class="service-title">项目操盘</h3>
                     <p class="service-desc">全流程项目管理，确保高质量交付</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team">
+        <div class="team-inner">
+            <div class="section-header">
+                <div>
+                    <span class="section-label">Team</span>
+                    <h2 class="section-title">团队</h2>
+                </div>
+                <div class="section-line"></div>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <div class="team-photo-placeholder">添加创始人照片</div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">冯黎涵</h3>
+                        <p class="team-role">创始人</p>
+                        <p class="team-desc">10年+商业空间与品牌营销经验，专注文化IP与内容运营</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners">
+        <div class="partners-inner">
+            <div class="section-header">
+                <div>
+                    <span class="section-label">Partners</span>
+                    <h2 class="section-title">合作方</h2>
+                </div>
+                <div class="section-line"></div>
+            </div>
+            <div class="partner-card">
+                <div class="partner-logo">
+                    <span>井</span>
+                </div>
+                <div class="partner-info">
+                    <h4>井亭天地（韩国街）</h4>
+                    <p>长期战略合作伙伴</p>
                 </div>
             </div>
         </div>
