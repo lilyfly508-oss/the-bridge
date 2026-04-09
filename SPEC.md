@@ -45,8 +45,8 @@
 - 柔白 #f5f5f0 (文字)
 
 **字体**:
-- 标题: 现代衬线体 (Playfair Display / Noto Serif SC)
-- 正文: 简洁无衬线 (Inter / Noto Sans SC)
+- 标题: Playfair Display / Noto Serif SC (现代衬线体)
+- 正文: Inter / Noto Sans SC (简洁无衬线)
 
 **风格**:
 - 杂志排版感
